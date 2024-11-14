@@ -106,24 +106,24 @@ class LinkedList:
         print("None")
 
 
-# Example usage
-ll = LinkedList()
-ll.add(3)
-ll.add(2)
-ll.add(1)
-ll.display()  # Expected: 1 -> 2 -> 3 -> None
-
-ll.insert(2, 4)
-ll.display()  # Expected: 1 -> 2 -> 4 -> 3 -> None
-
-ll.remove()
-ll.display()  # Expected: 1 -> 2 -> 4 -> None
-
-ll.reverse()
-ll.display()  # Expected: 4 -> 2 -> 1 -> None
-
-print("Contains 2:", ll.contains(2))  # Expected: True
-print("Contains 5:", ll.contains(5))  # Expected: False
-
-plain_list = ll.to_plain_list()
-print("Plain list:", plain_list)  # Expected: [4, 2, 1]
+# # Example usage
+# ll = LinkedList()
+# ll.add(3)
+# ll.add(2)
+# ll.add(1)
+# ll.display()  # Expected: 1 -> 2 -> 3 -> None
+#
+# ll.insert(2, 4)
+# ll.display()  # Expected: 1 -> 2 -> 4 -> 3 -> None
+#
+# ll.remove()
+# ll.display()  # Expected: 1 -> 2 -> 4 -> None
+#
+# ll.reverse()
+# ll.display()  # Expected: 4 -> 2 -> 1 -> None
+#
+# print("Contains 2:", ll.contains(2))  # Expected: True
+# print("Contains 5:", ll.contains(5))  # Expected: False
+#
+# plain_list = ll.to_plain_list()
+# print("Plain list:", plain_list)  # Expected: [4, 2, 1]

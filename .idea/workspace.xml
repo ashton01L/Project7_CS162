@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecbee173-b29d-4cc1-bc27-eab09b899211" name="Changes" comment="third iteration to test vs. GradeScope">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ecbee173-b29d-4cc1-bc27-eab09b899211" name="Changes" comment="fourth iteration to test vs. GradeScope">
       <change beforePath="$PROJECT_DIR$/LinkedList.py" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +48,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12 (Project6d_CS162)" />
+      <option name="SDK_NAME" value="Python 3.12 (Project6a_CS162)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -104,13 +103,22 @@
       <option name="project" value="LOCAL" />
       <updated>1731567643363</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fourth iteration to test vs. GradeScope">
+      <option name="closed" value="true" />
+      <created>1731568076195</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731568076195</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first iteration to test vs. GradeScope" />
     <MESSAGE value="second iteration to test vs. GradeScope" />
     <MESSAGE value="third iteration to test vs. GradeScope" />
-    <option name="LAST_COMMIT_MESSAGE" value="third iteration to test vs. GradeScope" />
+    <MESSAGE value="fourth iteration to test vs. GradeScope" />
+    <option name="LAST_COMMIT_MESSAGE" value="fourth iteration to test vs. GradeScope" />
   </component>
 </project>
