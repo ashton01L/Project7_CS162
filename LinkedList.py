@@ -86,12 +86,13 @@ class LinkedList:
     def to_plain_list(self):
         """Recursively converts linked list to a regular Python list."""
 
-        def _to_plain_list(node):
+        def _to_plain_list(node, acc):
             if node is None:
-                return []
-            return [node.data] + _to_plain_list(node.next)
+                return acc
+            acc.append(node.data)
+            return _to_plain_list(node.next, acc)
 
-        return _to_plain_list(self._head)
+        return _to_plain_list(self._head, [])
 
     def display(self):
         """Displays contents of list."""
