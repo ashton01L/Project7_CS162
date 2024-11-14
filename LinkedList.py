@@ -34,17 +34,27 @@ class LinkedList:
 
         self._head = _add(self._head, data)
 
-    def remove(self):
-        """Recursively removes the last node from the list."""
+    def remove(self, *args):
+        """Recursively removes nodes with given values from the list."""
+        if len(args) == 0:
+            return
 
-        def _remove(node):
-            """Helper recursive function to remove the last node."""
-            if node is None or node.next is None:
-                return None
-            node.next = _remove(node.next)
-            return node
+        # Recursively remove the first element in the args
+        self._head = self._remove(self._head, args[0])
 
-        self._head = _remove(self._head)
+        # Continue to remove the next arg
+        self.remove(*args[1:])
+
+    def _remove(self, node, data):
+        """Helper to recursively removes nodes with specific data."""
+        if node is None:
+            return None # End of list, return None
+
+        if node.data == data:
+            return node.next # Remove by skipping
+
+        node.next = self._remove(node.next, data) # Continue recursion
+        return node
 
     def contains(self, data):
         """Recursively checks if list contains a node with the given data."""
