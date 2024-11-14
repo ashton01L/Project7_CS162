@@ -97,7 +97,7 @@ class LinkedList:
             """Helper recursive function to convert list to Python list."""
             if node is None:
                 return []
-            return [node.data] + _to_plain_list(node.next)
+            return _to_plain_list(node.next) + [node.data]
 
         return _to_plain_list(self._head)
 
