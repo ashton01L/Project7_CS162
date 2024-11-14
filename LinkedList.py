@@ -18,34 +18,32 @@ class LinkedList:
         self._head = None  # Initialize the head of the list as private
 
     def get_head(self):
-        """Returns the first node in list."""
+        """Returns the first node in the list."""
         return self._head
 
     def add(self, data):
-        """Recursively adds a node with given data at front of list."""
+        """Adds a node with given data at the front of the list."""
         new_node = Node(data)
         new_node.next = self._head
         self._head = new_node
 
     def remove(self):
-        """Recursively removes last node from list."""
+        """Removes the last node from the list using recursion."""
 
-        def _remove(node):
-            if node.next is None:
-                return None
-            elif node.next.next is None:
+        def _remove_last(node):
+            if node.next.next is None:
                 node.next = None
             else:
-                _remove(node.next)
+                _remove_last(node.next)
 
         if self._head is not None:
             if self._head.next is None:
                 self._head = None
             else:
-                _remove(self._head)
+                _remove_last(self._head)
 
     def contains(self, data):
-        """Recursively checks if list contains a node with given data."""
+        """Checks if the list contains a node with the given data."""
 
         def _contains(node):
             if node is None:
@@ -57,7 +55,7 @@ class LinkedList:
         return _contains(self._head)
 
     def insert(self, index, data):
-        """Recursively inserts a node with given data at specified index."""
+        """Inserts a node with given data at the specified index."""
 
         def _insert(node, index):
             if index == 0:
@@ -69,10 +67,12 @@ class LinkedList:
             node.next = _insert(node.next, index - 1)
             return node
 
+        if index < 0:
+            raise IndexError("Index out of bounds")
         self._head = _insert(self._head, index)
 
     def reverse(self):
-        """Recursively reverses linked list."""
+        """Reverses the linked list in place by rearranging node order."""
 
         def _reverse(node, prev=None):
             if node is None:
@@ -84,17 +84,17 @@ class LinkedList:
         self._head = _reverse(self._head)
 
     def to_plain_list(self):
-        """Recursively converts linked list to a regular Python list."""
-        plain_list = []
-        current = self._head
-        while current is not None:
-            plain_list.append(current.data)
-            current = current.next
-        return plain_list
+        """Converts the linked list to a regular Python list using recursion."""
 
+        def _to_plain_list(node):
+            if node is None:
+                return []
+            return [node.data] + _to_plain_list(node.next)
+
+        return _to_plain_list(self._head)
 
     def display(self):
-        """Displays contents of list."""
+        """Displays contents of the list."""
 
         def _display(node):
             if node is None:
