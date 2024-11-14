@@ -1,0 +1,1 @@
+Write a LinkedList class that has recursive implementations of the add and remove methods described in the Exploration.
