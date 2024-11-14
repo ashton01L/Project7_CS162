@@ -21,28 +21,28 @@ class LinkedList:
         """Returns the first node in list."""
         return self._head
 
-    def insert_front(self, data):
+    def add(self, data):
         """Recursively adds a node with given data at front of list."""
         new_node = Node(data)
         new_node.next = self._head
         self._head = new_node
 
-    def delete_last(self):
+    def remove(self):
         """Recursively removes last node from list."""
 
-        def _delete_last(node):
+        def _remove(node):
             if node.next is None:
                 return None
             elif node.next.next is None:
                 node.next = None
             else:
-                _delete_last(node.next)
+                _remove(node.next)
 
         if self._head is not None:
             if self._head.next is None:
                 self._head = None
             else:
-                _delete_last(self._head)
+                _remove(self._head)
 
     def contains(self, data):
         """Recursively checks if list contains a node with given data."""
@@ -108,15 +108,15 @@ class LinkedList:
 
 # # Example usage
 # ll = LinkedList()
-# ll.insert_front(3)
-# ll.insert_front(2)
-# ll.insert_front(1)
+# ll.add(3)
+# ll.add(2)
+# ll.add(1)
 # ll.display()  # Expected: 1 -> 2 -> 3 -> None
 #
 # ll.insert(2, 4)
 # ll.display()  # Expected: 1 -> 2 -> 4 -> 3 -> None
 #
-# ll.delete_last()
+# ll.remove()
 # ll.display()  # Expected: 1 -> 2 -> 4 -> None
 #
 # ll.reverse()
